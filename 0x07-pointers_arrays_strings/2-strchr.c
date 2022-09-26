@@ -1,22 +1,30 @@
 #include "holberton.h"
+
 /**
- * _strspn - gets lengthof a prefix substring
- * @s: string to check
- * @accept: string to check against
+ * _strchr - set memory function
  *
- * Return: number of bytes of s in accept
+ * @s: pointer to array
+ * @c: char type
+ *
+ *
+ * Return: s
  */
-unsigned int _strspn(char *s, char *accept)
+
+char *_strchr(char *s, char c)
 {
-int i, k, counter = 0;
-for (i = 0; s[i] != '\0'; i++)
-if (counter != i)
-break;
-for (k = 0; accept[k] != '\0'; k++)
-{
-if (s[i] == accept[k])
-counter++;
-}
-}
-return (counter);
+
+	while (s[0] != '\0')
+	{
+
+		if (s[0] == c)
+
+			return (s);
+
+		else if (s[1] == c)
+
+			return (s + 1);
+
+		s++;
+	}
+	return (s + 1);
 }

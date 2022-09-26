@@ -1,22 +1,33 @@
 #include "holberton.h"
+
 /**
- * _strspn - gets lengthof a prefix substring
- * @s: string to check
- * @accept: string to check against
+ * _strspn -  gets the length of a prefix substring
  *
- * Return: number of bytes of s in accept
+ * @s: char pointer
+ * @accept: char pointer
+ *
+ *
+ * Return: s
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-int i, k, counter = 0;
-for (i = 0; s[i] != '\0'; i++)
-if (counter != i)
-break;
-for (k = 0; accept[k] != '\0'; k++)
-{
-if (s[i] == accept[k])
-counter++;
-}
-}
-return (counter);
+
+	unsigned int count1, count2;
+
+	for (count1 = 0; s[count1] != '\0'; count1++)
+	{
+		for (count2 = 0; accept[count2] != '\0'; count2++)
+		{
+			if (s[count1] == accept[count2])
+			{
+				break;
+			}
+		}
+			if (!(accept[count2]))
+			{
+				break;
+			}
+	}
+	return (count1);
 }

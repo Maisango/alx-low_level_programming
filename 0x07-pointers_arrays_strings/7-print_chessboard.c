@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- *print_chessboard - print a matrice.
- *@a: matrice.
+ * print_chessboard - prints 2D array of chessboard
+ * @a: chessboard array
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	int row, col;
 
-	for (i = 0; i < 8; i++)
+	for (row = 0; row < 8; row++)
 	{
-		for (j = 0; j < 8; j++)
+		for (col = 0; col < 8; col++)
 		{
-			_putchar(a[i][j]);
-			if (j == 7)
-				_putchar('\n');
+			_putchar(a[row][col]);
 		}
+		_putchar('\n');
 	}
 }
