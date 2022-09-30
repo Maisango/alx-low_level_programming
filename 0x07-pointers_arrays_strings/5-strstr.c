@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
  *_strstr - find a string in a string.
  *@haystack: first string.
